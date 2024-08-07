@@ -1,0 +1,55 @@
+							ASSIGNMENT-3
+						---------------------------
+
+	31)Display the maximum salary being paid to the clerk?
+	ans)to fetch the maximum salary being paid to the clerk use
+
+	syntax: select max(salary) from employees where designation in ('clerk');
+
+	32)Display the maximum salary being paid to depart number 20?
+	ans)to fetch the maximum salary being paid to depart number 20 use
+
+	syntax: select max(salary) from employees where department_NO=20;
+
+	33)Display the minimum salary being paid to any salesman?
+	ans) to fetch the minimum salary being paid to any salesman use
+
+	syntax: select min(salary) from employees where designation in ('salesman');
+
+	34)Display the average salary drawn by MANAGERS?
+	ans) to fetch the average salary drawn by MANAGERS use
+
+	syntax: select avg(salary) from employees where designation in ('MANAGER');
+
+	35)Display the total salary drawn by analyst working in depart number 40?
+	ans) to fetch the total salary drawn by analyst working in depart number 40 use
+
+	syntax: select sum(salary) from employees where designation in ('analyst') and department_NO=40;
+
+	36)Display the names of the employee in order of salary i.e the name of the employee earning
+	   lowest salary should salary appear first?
+
+	syntax: select first_name from employees order by salary ;
+
+	37)Display the names of the employee in descending order of salary?
+
+	syntax: select first_name from employees order by salary desc ;
+
+	38)Display the names of the employee in order of employee name?
+
+	syntax: select first_name from employees order by first_name ;
+
+	39)Display empno,ename,deptno,sal sort the output first base on name and within name by deptno and
+	   with in deptno by sal?
+
+	syntax: select employee_id,first_name,department_no,salary from employees order by first_name ;
+
+	40)Display the names of the employee along with their annual salary(sal*12).The name of the employee earning highest 
+	  annual salary should appear first?
+
+	syntax: select first_name ,(salary*12) as annual_salary from employees order by salary desc;
+
+
+
+
+
