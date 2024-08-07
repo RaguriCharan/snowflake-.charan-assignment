@@ -1,0 +1,76 @@
+                                                 	  Assignment -1
+                                              	 -----------------------------
+	1)Dispaly the details of all employees?
+	ans) To fetch the details of all employees we goona use the below syntax
+ 	    syntax: select * from employees;
+
+	2)Display the depart information from department table?
+	ans) To fetch the only depart column information of department table we goona use the below syntax
+	    syntax: select depart from department;
+
+	3)Display the name and job for all the employees?
+	ans) To fetch the two column data of name and job from the employees table use below syntax
+	    syntax: select name,  job from employees;
+
+	4)Display the name and salary for all the employees?
+	ans) To fetch the two column data of name and salary from the employees table use below syntax
+	    syntax: select name, salary from employees;
+
+	5)Display the employee_no and totalsalary for all the employees?
+        ans)displaying employee_no and totalsalary from below table
+	empid   employee_no     salary         incentives
+	  10	2345667		40000.00	2000
+	  11	3345667		30000.00	2000
+	  12	5445667		45000.00	2000
+	  13	5645667		50000.00	2000
+	  syntax:select employee no,(salary+incentives) as totalsalary from employees;
+	this results as below
+		employee_no	totalsalary
+	 	 2345667	42000
+		 3345667	32000
+	 	 5445667	47000
+		 5645667	52000
+
+	6)Display the employee_name and annualsalary for all the employees?
+        ans)displaying employee_name and annualsalary from below table
+	empid   employee_name   employee_no     salary         incentives
+	10	ram		2345667		40000.00	2000
+	11	rakesh		3345667		30000.00	2000
+	12	ramesh		5445667		45000.00	2000
+	13	suresh		5645667		50000.00	2000
+	 syntax:select employee_name,(salary*12) as annualsalary from employees;
+	this results as below
+	employee_name   annualsalary
+	ram		480000.00
+	rakesh		360000.00
+	ramesh		540000.00
+	suresh		600000.00
+
+	7)Display the names of all the employees who are working in the depart_number 10?
+	ans) to fetch the employees names who are working in the depart_number 10 use below syntax.
+	syntax:select employee_name from employees where depart_number=10;
+
+	8)Display the names of all the employees who are working as clerks and drawing a salary more than 3000?
+	ans) to fetch the names of all the employees who are working as clerks and drawing a salary more than 3000 use below syntax.
+	syntax:select employee_name from employees where department='clerks' and salary>3000;
+
+	9)Display the employee_number and name who are earning common?	
+	ans) to fetch the employee_number and name who are earning common use the below syntax.
+	syntax:select employee_number, 
+	name from employees 
+	where salary in(select salary from employees group by salary having count(salary)>=2) ;
+
+
+
+	10)Display the employee_number and name who do not earning any common?	
+	ans) to fetch the employee_number and name who do not earning common use the below syntax.
+	syntax:select employee_number, 
+	name from employees 
+	where salary not in(select salary from employees group by salary having count(salary)>=2) ;
+
+
+
+
+
+
+
