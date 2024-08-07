@@ -1,0 +1,59 @@
+							ASSIGNMENT-2
+					-----------------------------------------
+
+	11)Display the names of employees who are working as clerks,salesman or analyst and drawing a salary more than 3000?
+	ans) to fetch the names of employees who are working as clerks,salesman or analyst and drawing a salary more than 3000
+	     use below syntax.
+	
+	syntax: select (first_name+last_name) from employees where designation in ('clerks' , 'salesman' , 'analyst') and salary>3000;
+
+	12)Display the names of the employees who are working in the company for the past 5 years; 
+	ans) to fetch the names of the employees who are working in the company for the past 5 years use below syntax.
+
+	syntax:   select first_name ,hire_date from employees where hire_date>=date_sub(curdate(),Interval 5 Year);
+
+	13)Display the names of the employees who have joined the company before 30-june-90 or after 31-dec-90?
+	ans) to fetch the names of the employees who have joined the company before 30-june-90 or after 31-dec-90.
+
+	syntax: select first_name from employees where hire_date<'30-june-1990' or hire_date>'31-dec-1990';
+
+
+
+	14)Display current date?
+	ans)to fetch the current date we goona use the below syntax
+
+	syntax: select curdate();
+
+	15)Display the list of all users in your database(use catalog table)?
+	ans)
+
+	16)Display the names of all tables from current users?
+	ans) to display the table names that consists in our schemas or database we goona first access the database
+	     or schema first and then access the names of the tables.
+
+	syntax: use datase_name; or use schema_name; then
+	        show tables;
+
+	 this will showa all the tables names present in our database or schema.
+
+	17)Dispaly the name of the current user?
+	ans) to display the current user that which we are currently working.
+
+	syntax: select user();
+
+	18))Display the names of the employees who are working in depart number 10 0r 20 or 40 or employees working as clerks,	
+	   salesman or analyst?
+	ans) to fetch the names of the employees who are working in depart number 10 0r 20 or 40 or employees working as clerks,	
+	   salesman or analyst use below syntax.
+
+	syntax:select first_name from employees where depart_number in(10,20,40) or department_name in('clerks','salesman','analyst');
+
+	19)Display the names of the employees whose name starts with alphabet S? 
+	ans) to fetch the names of the employees whose name starts with alphabet S.
+
+	syntax: select first_name from employees where first_name LIKE ('S%');
+
+	20)Display the names of the employees whose name ends with alphabet S? 
+	ans) to fetch the names of the employees whose name ends with alphabet S.
+
+	syntax: select first_name from employees where first_name LIKE ('%S');
