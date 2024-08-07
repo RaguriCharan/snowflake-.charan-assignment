@@ -1,0 +1,53 @@
+								ASSIGNMENT-3
+						--------------------------------------------
+	21)Dispaly the names of the employees whos names have second alphabet A in thier names?
+	ans) to fetch the names of the employees whos names have second alphabet A in thier names
+
+	syntax: select first_name from employees where  substring(first_name,3,1)='A';
+					or
+		select first_name from employees where first_name like '_A%';
+
+
+	22)select the names of the employees whose names has exactly five characters in length?
+	ans)to select the names of the employees whose names has exactly five characters in length.
+	
+	syntax: select first_name from employees where character_length(first_name)=5;
+
+	23)Dispaly the names of the employees who are not working as MANAGERS?
+	ans) to fetch the names of the employees who are not working as MANAGERS.
+
+	syntax:  select first_name from employees where designation not in ('manager');
+
+	24)Dispaly the names of the employees who are not working as SALESMAN OR CLERKS OR ANALYST?
+	ans) to fetch the names of the employees who are not working as SALESMAN OR CLERKS OR ANALYST.
+
+	syntax:  select first_name from employees where designation not in ('salesman','clerks','analyst');
+
+	25)Display all rows from the emp table.the system wait after every screen full of information?
+	ans)
+
+	26)Display the total number of employee working in the company?
+	ans)to fetch the total number of employee working in the company use
+
+	syntax: select count(first_name) as total_no from employees;
+
+	27)Display the total salary begging paid to all empoyees?
+	ans) to know the total salary begging paid to all empoyees use
+
+	syntax: select sum(salary) as emp_wage from employees;
+
+	28)Display the maximum salary from emp table?
+	ans) to know the maximum salary from emp table use
+
+	syntax: select max(salary) as highest_salary from employees;
+
+
+	29)Display the minimum salary from emp table?
+	ans) to know the minimum salary from emp table use
+
+	syntax: select min(salary) as lowest_salary from employees;
+
+	30)Display the average salary from emp table?
+	ans) to know the average salary from emp table use
+
+	syntax: select avg(salary) as average_salary from employees;
